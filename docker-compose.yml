@@ -1,0 +1,14 @@
+version: '3'
+services:
+  blog:
+    image: ghost
+    ports:
+      - 3000:2368
+    volumes:
+      - .:/var/lib/ghost/content/themes/casper
+    environment:
+      - url=http://localhost:3000
+      - NODE_ENV=development
+
+
+
